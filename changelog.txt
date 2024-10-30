@@ -1,0 +1,122 @@
+# Change log
+
+## [[2.0.7]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.7) - 2021-01-?
+
+### Added
+- An error message which displays if the request to Zoho returns a timeout error.  The user will be notified to refresh the page.
+
+### Removed
+- Removed the unused LSX Search UIX templates.
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (5.6).
+- General testing to ensure compatibility with latest Caldera Forms (1.9.3).
+
+## [[2.0.6]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.6) - 2020-08-14
+
+### Added
+- Added in an error message which outputs the Zoho error when a request fails.
+- A Fallback request to handle an API key timeout error, it will only trigger for this error.
+
+### Updated
+- Tested with [Caldera Forms 1.9.2](https://wordpress.org/plugins/caldera-forms/)
+- Tested with [WordPress 5.5](https://wordpress.org/)
+
+## [[2.0.5]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.5) - 2020-07-30
+
+### Fixed
+- [#11](https://github.com/lightspeeddevelopment/cf-zoho/issues/11) Changed the "duplicate email" field to an array instead of a string.
+- Changed the functions and variables to public, to allow 3rd party plugins access to the posted info.
+
+## [[2.0.4]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.4) - 2020-03-30
+
+### Added
+- Added in a filter to allow skipping of the zoho request. 'lsx_cf_zoho_skip_do_request'
+- Moved the form "unblock" function into its own class and out of the processor.
+
+### Fixed
+- Changed the form variables from "private" to "public"
+
+### Security
+- Updating npm packages.
+- General testing to ensure compatibility with latest WordPress version (5.4).
+- General testing to ensure compatibility with latest LSX Theme version (2.7).
+
+
+## [[2.0.3]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.3) - 2019-04-24
+
+### Fixed
+- Added in a conditional setting to only add the form unblocker if its active.
+
+
+## [[2.0.2]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.2) - 2019-03-29
+
+### Added
+- Added in a setting so you have the choice to enable the jQuery BlockUI js or not.
+
+
+## [[2.0.1]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.1) - 2019-03-19
+
+### Added
+- Added in a filter to allow the attaching of files from the upload field to the processor running.
+- Added in a form processing notification using the jquery.blockUI library.
+- Added in 2 new sections to the readme.txt for help on form configuration.
+
+### Fixed
+- Fixed various formatting issues when sending a request to Zoho.
+
+
+## [[2.0.0]](https://github.com/lightspeeddevelopment/cf-zoho/releases/tag/2.0.0) - 2019-01-17
+
+### Added
+- Upgraded the API version to 2.0.
+- Added in a class for pre-populating the Caldera Form with information from Zoho via a URL.
+- Added in logging for all requests.
+- Added in the Travis Integration.
+
+### Changed
+- Renamed 'lsx_cf_zoho_create_entry' hook to 'process_zoho_submission' as the old hook passes a different $object array which will probably break any code hooking this.
+- Restructured the Plugin Files and Classes.
+
+### Deprecated
+- Removed the force text fields.
+
+
+## [[1.1.2]]()
+
+### Added
+- Added in a filter to replace any checkbox values with a set "true" or "false"
+- Removed the restricted fields from the configuration options allowing you to map a magic tag to the field.
+- Removed the unused options for the Lead and the Contact processors.
+- Adding in a setting field to allow the user to define their API url.
+
+### Fixed
+- Added in 3 options to fix the duplicate checks on Contact and Lead Submission.
+
+
+## [[1.1.1]]()
+
+### Added
+- Added A Filter 'lsx_cf_zoho_create_entry' to allow manipulation of the request object.
+- Added An Action 'lsx_cf_zoho_create_entry_complete' to allow tasks for after creation.
+- Added a new config page "Field Setup".
+- Added in a setup page to allow you to force "select" dropdowns via WP.
+
+### Fixed
+- Fixed a typo in the get config call which prevented certain tasks from running.
+- Fixed the list configs.
+
+
+## [[1.1.0]]()
+
+### Added
+- Added in a fallback connection for the wp_remote_request in the CF_Zoho_CRM() class.
+
+### Fixed
+- Fixed the filtering of the XML data sent to Zoho
+
+
+## [[1.0.0]]()
+
+### Added
+- Initial release.
